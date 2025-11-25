@@ -1,0 +1,24 @@
+[project]
+name = "ibis-compatibility"
+version = "0.1.0"
+description = "Automatically checks if a given expression graph is compatible with a backend."
+readme = "README.md"
+authors = [
+    { name = "ianwhale", email = "ianpatrickwhalen@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "beautifulsoup4>=4.14.2",
+    "httpx>=0.28.1",
+    "ibis-framework>=11.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+test = [
+    "ibis-framework[duckdb,examples]>=11.0.0",
+    "pytest>=9.0.1",
+]
