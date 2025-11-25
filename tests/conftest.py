@@ -1,5 +1,6 @@
 """Fixture definitions."""
 
+import gzip
 from pathlib import Path
 
 import pytest
@@ -7,9 +8,9 @@ import pytest
 
 @pytest.fixture(scope="session")
 def page_html() -> str:
-    html_path = Path(__file__).parent / "static" / "matrix.html"
+    html_path = Path(__file__).parent / "static" / "matrix.html.gz"
 
-    with open(html_path, "r") as fptr:
+    with gzip.open(html_path, "rt", encoding="utf-8") as fptr:
         html = fptr.read()
 
     return html
