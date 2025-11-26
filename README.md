@@ -2,6 +2,8 @@
 
 The purpose of this package is to determine which backends a give Ibis expression could run on.
 
+See [here](https://ibis-project.org/) for more on Ibis.
+
 ## Quickstart
 
 To run a quick example, first install:
